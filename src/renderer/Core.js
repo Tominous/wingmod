@@ -136,7 +136,7 @@ Core.prototype.resetRenderer = function(){
 
 Core.prototype.resetCamera = function(){
     this.sceneManager.get(this.activeScene).resetCamera();
-    // this.sceneManager.get('FlatHudScene').resetCamera();
+     this.sceneManager.get('FlatHudScene').resetCamera();
 };
 
 Core.prototype.getActiveScene = function(){
@@ -211,7 +211,7 @@ Core.prototype.onPlayerActorAppeared = function(event){
     var actor = event.data;
     actor.inputListener = this.inputListener;
     this.hud.onPlayerActorAppeared(actor);
-    // this.flatHud.onPlayerActorAppeared(actor);
+     this.flatHud.onPlayerActorAppeared(actor);
     this.sceneManager.get(this.activeScene).onPlayerActorAppeared(actor);
 };
 
